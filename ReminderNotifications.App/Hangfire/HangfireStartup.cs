@@ -14,6 +14,7 @@ namespace ReminderNotifications.App.Hangfire
         {
             GlobalConfiguration.Configuration
                 .UseSqlServerStorage(@"Server = localhost\SQLEXPRESS; Database = HangfireDB; Trusted_Connection = True;");
+            //This uses a local instance of a SQL Express database.
 
             app.UseHangfireDashboard("/jobs");
             app.UseHangfireServer();
